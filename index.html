@@ -18,9 +18,10 @@
 
         <!-- Add your site or application content here -->
         <header>
-            <h1>FIG MOVIES</h1>
+            <h1>MOVIE FIG</h1>
             <div id='search' class='search'><img src='icons/0135-search.svg'></div>
         </header>
+        <button id='backToResults'>BACK</button>
         <div id='searchC'>
             <button id='back' data-text="BACK">BACK</button>
             <input id='input' type="text" title="zip code" placeholder="Enter your zip code" />
@@ -31,7 +32,7 @@
             <div id='banner'>
                 <div>
                     <h1>Movie Times</h1>
-                    <h2>Anywhere the night takes you</h2>
+                    <h2>Wherever that lousy date takes you</h2>
                     <button class='search'>SEARCH</button>
                 </div>
             </div>
@@ -41,10 +42,24 @@
                 <h1>Movies</h1>
                 <h1>Theater</h1>
             </div>
-            <div id='movies'></div>
+            <div id='error'>
+                <h1>Error</h1>
+                <p>Unfortunately the API providing the showtime data only allows for a certain number of searches per day.</p>
+                <button id='returnHome'>RETURN HOME</button>
+            </div>
+            <div id='movies'>
+            </div>
             <div id='more'>
                 <button id='loadMore' data-index='10' data-num='22'>MORE RESULTS</button>
             </div>
+        </div>
+        <div id='showTimes'>
+            <div class='st-title'>
+                <h1 id='movieTitleClicked'></h1>
+                <p id='movieTitleDesc'></p>
+                <h2>Showtimes:</h2>
+            </div>
+            <div id='times'></div>
         </div>
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
